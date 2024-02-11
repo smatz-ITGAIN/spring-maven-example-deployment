@@ -1,0 +1,20 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: spring-maven-example
+  namespace: demo-akademie
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'spring-maven-example:0.1'
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: 'java:latest'
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/smatz-ITGAIN/spring-maven-example.git'
