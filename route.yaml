@@ -1,0 +1,14 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: spring-maven-example
+spec:
+  to:
+    kind: Service
+    name: spring-maven-example
+    weight: 100
+  port:
+    targetPort: 1337-tcp
+  tls:
+    termination: edge
+  wildcardPolicy: None
