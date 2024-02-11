@@ -1,0 +1,18 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: java
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+    - name: latest
+      annotations:
+        openshift.io/imported-from: default-route-openshift-image-registry.apps-crc.testing/openshift/java
+      from:
+        kind: DockerImage
+        name: default-route-openshift-image-registry.apps-crc.testing/openshift/java
+      importPolicy:
+        importMode: Legacy
+      referencePolicy:
+        type: Source
