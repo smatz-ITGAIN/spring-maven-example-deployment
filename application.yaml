@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-app
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: demotest4
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: .
+    repoURL: 'https://github.com/smatz-ITGAIN/spring-maven-example-deployment.git'
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
