@@ -2,7 +2,6 @@ kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
   name: spring-maven-example
-  namespace: demo-akademie
 spec:
   output:
     to:
