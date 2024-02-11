@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: spring-maven-example
+spec:
+  ports:
+    - name: 1337-tcp
+      protocol: TCP
+      port: 1337
+      targetPort: 1337
+  selector:
+    deployment: spring-maven-example
