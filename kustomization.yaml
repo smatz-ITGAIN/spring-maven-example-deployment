@@ -1,0 +1,7 @@
+resources:
+  - buildconfig-0_1.yaml
+  - deployment.yaml
+  - imagestream-java.yaml
+  - imagestream-spring-maven-example.yaml
+  - route.yaml
+  - service.yaml
