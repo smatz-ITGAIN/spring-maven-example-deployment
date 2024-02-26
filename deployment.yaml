@@ -15,7 +15,7 @@ spec:
       containers:
         - name: spring-maven-example
           image: >-
-            image-registry.openshift-image-registry.svc:5000/demo-akademie-asdf/spring-maven-example:0.1
+            image-registry.openshift-image-registry.svc:5000/<demo-namespace>/spring-maven-example:0.1
           imagePullPolicy: IfNotPresent
       restartPolicy: Always
   strategy:
